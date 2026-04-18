@@ -2,9 +2,31 @@
 <html>
 <head>
   <title>3D ModelHub</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Inter, sans-serif; }
+    body { background: #141416; color: #f0f0f0; }
+    nav { background: #1c1c1e; height: 52px; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; }
+    .logo { font-size: 16px; font-weight: 500; }
+    .nav-links a { color: #6b6b6b; text-decoration: none; font-size: 12px; margin-left: 24px; }
+    .hero { padding: 60px 40px; }
+    .hero h1 { font-size: 48px; font-weight: 500; margin-bottom: 12px; }
+    .hero p { font-size: 16px; color: #6b6b6b; margin-bottom: 24px; }
+    .hero input { background: #1c1c1e; border: 1px solid #3a3a3c; border-radius: 8px; padding: 8px 16px; color: #f0f0f0; font-size: 12px; width: 320px; }
+    .hero button { background: #3a3a3c; border: none; border-radius: 8px; padding: 8px 16px; color: #f0f0f0; font-size: 12px; cursor: pointer; margin-left: 8px; }
+    .models { padding: 40px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .card { background: #242424; border: 1px solid #2c2c2e; border-radius: 8px; overflow: hidden; }
+    .card-img { background: #2c2c2e; height: 160px; }
+    .card-info { padding: 12px; }
+    .card-info h3 { font-size: 13px; font-weight: 500; color: #e0e0e0; margin-bottom: 4px; }
+    .card-info p { font-size: 11px; color: #505050; margin-bottom: 8px; }
+    .badge { font-size: 9px; background: #3a3a3c; color: #d0d0d0; border-radius: 4px; padding: 2px 6px; margin-bottom: 6px; display: inline-block; }
+    .card-footer { display: flex; align-items: center; justify-content: space-between; }
+    .format { font-size: 11px; color: #505050; }
+    .card-footer a { font-size: 11px; color: #d0d0d0; border: 1px solid #3a3a3c; border-radius: 4px; padding: 4px 10px; text-decoration: none; }
+  </style>
 </head>
 <body>
-
   <nav>
     <div class="logo">3D ModelHub</div>
     <div class="nav-links">
@@ -13,17 +35,14 @@
       <a href="#">About</a>
     </div>
   </nav>
-
   <section class="hero">
     <h1>Download Free 3D Models</h1>
     <p>Free 3D assets for every project</p>
     <input type="text" placeholder="Search for a model...">
     <button>Search</button>
   </section>
-
   <section class="models">
     <div class="grid">
-
       <div class="card">
         <div class="card-img"></div>
         <div class="card-info">
@@ -36,7 +55,6 @@
           </div>
         </div>
       </div>
-
       <div class="card">
         <div class="card-img"></div>
         <div class="card-info">
@@ -49,7 +67,6 @@
           </div>
         </div>
       </div>
-
       <div class="card">
         <div class="card-img"></div>
         <div class="card-info">
@@ -62,9 +79,7 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
-
 </body>
 </html>

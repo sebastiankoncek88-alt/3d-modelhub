@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>3D ModelHub - Categories</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Inter, sans-serif; }
+    body { background: #141416; color: #f0f0f0; }
+    nav { background: #1c1c1e; height: 52px; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; }
+    .logo { font-size: 16px; font-weight: 500; }
+    .nav-links a { color: #6b6b6b; text-decoration: none; font-size: 12px; margin-left: 24px; }
+    .content { padding: 60px 40px; }
+    .content h1 { font-size: 48px; font-weight: 500; margin-bottom: 40px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .card { background: #1c1c1e; border: 1px solid #2c2c2e; border-radius: 8px; padding: 32px; cursor: pointer; text-decoration: none; display: block; }
+    .card:hover { background: #242424; }
+    .card h2 { font-size: 20px; font-weight: 500; color: #f0f0f0; margin-bottom: 8px; }
+    .card p { font-size: 13px; color: #6b6b6b; margin-bottom: 16px; }
+    .card span { font-size: 11px; color: #505050; border: 1px solid #3a3a3c; border-radius: 4px; padding: 3px 8px; }
+    .icon { font-size: 32px; margin-bottom: 16px; }
+    footer { background: #1c1c1e; padding: 20px 40px; text-align: center; color: #505050; font-size: 12px; margin-top: 60px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">3D ModelHub</div>
+    <div class="nav-links">
+      <a href="index.html">Models</a>
+      <a href="categories.html">Categories</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+  <section class="content">
+    <h1>Categories</h1>
+    <div class="grid">
+      <a href="index.html" class="card">
+        <div class="icon">🔫</div>
+        <h2>Weapons</h2>
+        <p>Guns, rifles, grenades and more</p>
+        <span>3 models</span>
+      </a>
+      <a href="index.html" class="card">
+        <div class="icon">🪑</div>
+        <h2>Furniture</h2>
+        <p>Tables, beds, cabinets and more</p>
+        <span>4 models</span>
+      </a>
+      <a href="index.html" class="card">
+        <div class="icon">🚗</div>
+        <h2>Vehicles</h2>
+        <p>Cars, police cars and more</p>
+        <span>3 models</span>
+      </a>
+    </div>
+  </section>
+  <footer>3D ModelHub — Free 3D assets for everyone</footer>
+</body>
+</html>

@@ -16,7 +16,8 @@
     .models { padding: 20px 40px 40px; }
     .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .card { background: #242424; border: 1px solid #2c2c2e; border-radius: 8px; overflow: hidden; }
-    .card-img { height: 160px; display: flex; align-items: center; justify-content: center; font-size: 40px; }
+    .card-img { height: 160px; overflow: hidden; }
+    .card-img img { width: 100%; height: 100%; object-fit: cover; }
     .card-info { padding: 12px; }
     .card-info h3 { font-size: 13px; font-weight: 500; color: #e0e0e0; margin-bottom: 4px; }
     .card-info p { font-size: 11px; color: #505050; margin-bottom: 8px; }
@@ -32,7 +33,7 @@
   <nav>
     <div class="logo">3D ModelHub</div>
     <div class="nav-links">
-      <a href="#">Models</a>
+      <a href="index.html">Models</a>
       <a href="#">Categories</a>
       <a href="about.html">About</a>
     </div>
@@ -46,43 +47,7 @@
   <section class="models">
     <div class="grid">
       <div class="card">
-        <div class="card-img" style="background:#1a2a1a;">💣</div>
-        <div class="card-info">
-          <span class="badge">FREE</span>
-          <h3>Hand Grenade</h3>
-          <p>856 downloads</p>
-          <div class="card-footer">
-            <span class="format">.GLB</span>
-            <a href="Hand Grenade.glb" download>Download</a>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-img" style="background:#1a1a2a;">🔪</div>
-        <div class="card-info">
-          <span class="badge">FREE</span>
-          <h3>Knife</h3>
-          <p>1.1k downloads</p>
-          <div class="card-footer">
-            <span class="format">.ZIP</span>
-            <a href="Knife.zip" download>Download</a>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-img" style="background:#2a1a1a;">🔫</div>
-        <div class="card-info">
-          <span class="badge">FREE</span>
-          <h3>Assault Rifle</h3>
-          <p>2.3k downloads</p>
-          <div class="card-footer">
-            <span class="format">.ZIP</span>
-            <a href="Assault Rifle.zip" download>Download</a>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-img" style="background:#1a2a2a;">🔫</div>
+        <div class="card-img"><img src="model1jpg.webp"></div>
         <div class="card-info">
           <span class="badge">FREE</span>
           <h3>Pistol</h3>
@@ -94,7 +59,31 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-img" style="background:#2a2a1a;">🪑</div>
+        <div class="card-img"><img src="model2.jpg"></div>
+        <div class="card-info">
+          <span class="badge">FREE</span>
+          <h3>Assault Rifle</h3>
+          <p>2.3k downloads</p>
+          <div class="card-footer">
+            <span class="format">.ZIP</span>
+            <a href="Assault Rifle.zip" download>Download</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img"><img src="model3.jpg"></div>
+        <div class="card-info">
+          <span class="badge">FREE</span>
+          <h3>Hand Grenade</h3>
+          <p>856 downloads</p>
+          <div class="card-footer">
+            <span class="format">.GLB</span>
+            <a href="Hand Grenade.glb" download>Download</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img"><img src="model4.jpg"></div>
         <div class="card-info">
           <span class="badge">FREE</span>
           <h3>Table</h3>
@@ -106,7 +95,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-img" style="background:#1a2a2a;">🗄️</div>
+        <div class="card-img"><img src="model5.jpg"></div>
         <div class="card-info">
           <span class="badge">FREE</span>
           <h3>Drawer</h3>
@@ -118,7 +107,19 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-img" style="background:#2a1a2a;">🛏️</div>
+        <div class="card-img"><img src="model6.jpg"></div>
+        <div class="card-info">
+          <span class="badge">FREE</span>
+          <h3>TV Cabinet</h3>
+          <p>245 downloads</p>
+          <div class="card-footer">
+            <span class="format">.ZIP</span>
+            <a href="Knife.zip" download>Download</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-img"><img src="model7.jpg"></div>
         <div class="card-info">
           <span class="badge">FREE</span>
           <h3>Bed</h3>
@@ -130,7 +131,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-img" style="background:#1a1a2a;">🚓</div>
+        <div class="card-img"><img src="model8.jpg"></div>
         <div class="card-info">
           <span class="badge">FREE</span>
           <h3>Police Car</h3>
@@ -142,10 +143,10 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-img" style="background:#1a2a1a;">🚙</div>
+        <div class="card-img"><img src="model 9.jpg"></div>
         <div class="card-info">
           <span class="badge">FREE</span>
-          <h3>Low Poly Blue Car</h3>
+          <h3>Blue Car</h3>
           <p>987 downloads</p>
           <div class="card-footer">
             <span class="format">.GLB</span>
@@ -154,7 +155,7 @@
         </div>
       </div>
       <div class="card">
-        <div class="card-img" style="background:#2a1a1a;">🚗</div>
+        <div class="card-img"><img src="model10.jpg"></div>
         <div class="card-info">
           <span class="badge">FREE</span>
           <h3>CAR Model</h3>

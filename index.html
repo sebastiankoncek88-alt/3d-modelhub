@@ -33,8 +33,8 @@
     .card-footer a { font-size: 11px; color: #d0d0d0; border: 1px solid #3a3a3c; border-radius: 4px; padding: 4px 10px; text-decoration: none; }
     .card-footer a:hover { background: #3a3a3c; }
     footer { background: #1c1c1e; padding: 20px 40px; text-align: center; color: #505050; font-size: 12px; margin-top: 40px; }
-    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0d0d0f; z-index: 100; pointer-events: none; }
-    .modal.open { display: flex; pointer-events: all; }
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0d0d0f; z-index: 100; }
+    .modal.open { display: flex; }
     .modal-left { flex: 1; height: 100vh; background: #141416; }
     .modal-left model-viewer { width: 100%; height: 100%; }
     .modal-left .no-glb { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
@@ -165,7 +165,7 @@
       document.getElementById('modal').classList.remove('open');
       setTimeout(function() {
         document.getElementById('modal-viewer').innerHTML = '';
-      }, 100);
+      }, 150);
     }
   </script>
 </body>

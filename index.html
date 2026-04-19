@@ -38,7 +38,7 @@
     <div class="logo">3D ModelHub</div>
     <div class="nav-links">
       <a href="index.html">Models</a>
-      <a href="#">Categories</a>
+      <a href="categories.html">Categories</a>
       <a href="about.html">About</a>
     </div>
   </nav>
@@ -51,14 +51,14 @@
     </div>
   </section>
   <div class="filters">
-    <button class="filter active">All</button>
-    <button class="filter">Weapons</button>
-    <button class="filter">Furniture</button>
-    <button class="filter">Vehicles</button>
+    <button class="filter active" onclick="filterCards('all')">All</button>
+    <button class="filter" onclick="filterCards('weapons')">Weapons</button>
+    <button class="filter" onclick="filterCards('furniture')">Furniture</button>
+    <button class="filter" onclick="filterCards('vehicles')">Vehicles</button>
   </div>
   <section class="models">
     <div class="grid">
-      <div class="card">
+      <div class="card" data-category="weapons">
         <div class="card-img"><img src="model1jpg.webp"></div>
         <div class="card-info">
           <span class="badge">FREE</span>
@@ -70,7 +70,7 @@
           </div>
         </div>
       </div>
-      <div class="card">
+      <div class="card" data-category="weapons">
         <div class="card-img"><img src="model2.jpg"></div>
         <div class="card-info">
           <span class="badge">FREE</span>
@@ -82,7 +82,7 @@
           </div>
         </div>
       </div>
-      <div class="card">
+      <div class="card" data-category="weapons">
         <div class="card-img"><img src="model3.jpg"></div>
         <div class="card-info">
           <span class="badge">FREE</span>
@@ -94,7 +94,7 @@
           </div>
         </div>
       </div>
-      <div class="card">
+      <div class="card" data-category="furniture">
         <div class="card-img"><img src="model4.jpg"></div>
         <div class="card-info">
           <span class="badge">FREE</span>
@@ -106,7 +106,7 @@
           </div>
         </div>
       </div>
-      <div class="card">
+      <div class="card" data-category="furniture">
         <div class="card-img"><img src="model5.jpg"></div>
         <div class="card-info">
           <span class="badge">FREE</span>
@@ -118,7 +118,7 @@
           </div>
         </div>
       </div>
-      <div class="card">
+      <div class="card" data-category="furniture">
         <div class="card-img"><img src="model6.jpg"></div>
         <div class="card-info">
           <span class="badge">FREE</span>
@@ -130,7 +130,7 @@
           </div>
         </div>
       </div>
-      <div class="card">
+      <div class="card" data-category="furniture">
         <div class="card-img"><img src="model7.jpg"></div>
         <div class="card-info">
           <span class="badge">FREE</span>
@@ -142,7 +142,7 @@
           </div>
         </div>
       </div>
-      <div class="card">
+      <div class="card" data-category="vehicles">
         <div class="card-img"><img src="model8.jpg"></div>
         <div class="card-info">
           <span class="badge">FREE</span>
@@ -154,7 +154,7 @@
           </div>
         </div>
       </div>
-      <div class="card">
+      <div class="card" data-category="vehicles">
         <div class="card-img"><img src="model 9.jpg"></div>
         <div class="card-info">
           <span class="badge">FREE</span>
@@ -166,7 +166,7 @@
           </div>
         </div>
       </div>
-      <div class="card">
+      <div class="card" data-category="vehicles">
         <div class="card-img"><img src="model10.jpg"></div>
         <div class="card-info">
           <span class="badge">FREE</span>
@@ -181,5 +181,18 @@
     </div>
   </section>
   <footer>3D ModelHub — Free 3D assets for everyone</footer>
+  <script>
+    function filterCards(cat) {
+      document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+      document.querySelectorAll('.card').forEach(card => {
+        if(cat === 'all' || card.dataset.category === cat) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>

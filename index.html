@@ -23,7 +23,7 @@
     .card { background: #242424; border: 1px solid #2c2c2e; border-radius: 8px; overflow: hidden; cursor: pointer; }
     .card:hover { border-color: #505050; }
     .card-img { height: 160px; overflow: hidden; background: #141416; }
-    .card-img img { width: 100%; height: 100%; object-fit: contain; background: #141416; }
+    .card-img img { width: 100%; height: 100%; object-fit: contain; }
     .card-info { padding: 12px; }
     .card-info h3 { font-size: 13px; font-weight: 500; color: #e0e0e0; margin-bottom: 4px; }
     .card-info p { font-size: 11px; color: #505050; margin-bottom: 8px; }
@@ -64,7 +64,7 @@
     <p>Free 3D assets for every project</p>
     <div class="search-row">
       <input type="text" id="searchInput" placeholder="Search for a model..." oninput="searchCards()">
-      <button class="search-btn" onclick="searchCards()">Search</button>
+      <button class="search-btn">Search</button>
     </div>
   </section>
   <div class="filters">
@@ -119,4 +119,57 @@
   </section>
   <footer>3D ModelHub — Free 3D assets for everyone</footer>
 
-  <div class="modal" id=
+  <div class="modal" id="modal">
+    <div class="modal-left" id="modal-viewer"></div>
+    <div class="modal-right">
+      <h2 id="modal-title"></h2>
+      <span class="badge2" id="modal-format"></span>
+      <p id="modal-downloads"></p>
+      <p style="color:#505050;font-size:12px;margin-top:8px;" id="modal-hint"></p>
+      <div class="spacer"></div>
+      <a class="dl-btn" id="modal-download" href="#" download>Download</a>
+      <button class="modal-close" onclick="closeModal()">← Back</button>
+    </div>
+  </div>
+
+  <script>
+    function filterCards(cat, btn) {
+      document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.card').forEach(card => {
+        card.style.display = (cat === 'all' || card.dataset.category === cat) ? 'block' : 'none';
+      });
+    }
+
+    function searchCards() {
+      const q = document.getElementById('searchInput').value.toLowerCase();
+      document.querySelectorAll('.card').forEach(card => {
+        card.style.display = card.dataset.name.includes(q) ? 'block' : 'none';
+      });
+    }
+
+    function openModal(name, file, glb, img, downloads, format) {
+      document.getElementById('modal-title').textContent = name;
+      document.getElementById('modal-download').href = file;
+      document.getElementById('modal-downloads').textContent = downloads;
+      document.getElementById('modal-format').textContent = format;
+      const viewer = document.getElementById('modal-viewer');
+      if(glb) {
+        document.getElementById('modal-hint').textContent = 'Drag to rotate • Scroll to zoom';
+        viewer.innerHTML = '<model-viewer src="' + glb + '" auto-rotate camera-controls style="width:100%;height:100vh;background:#141416;"></model-viewer>';
+      } else {
+        document.getElementById('modal-hint').textContent = '3D preview not available for ZIP format';
+        viewer.innerHTML = '<div class="no-glb"><img src="' + img + '"></div>';
+      }
+      document.getElementById('modal').classList.add('open');
+    }
+
+    function closeModal() {
+      document.getElementById('modal').classList.remove('open');
+      setTimeout(function() {
+        document.getElementById('modal-viewer').innerHTML = '';
+      }, 150);
+    }
+  </script>
+</body>
+</html>
